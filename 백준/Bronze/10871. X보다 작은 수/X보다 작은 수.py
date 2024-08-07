@@ -10,5 +10,5 @@ for i in range(n):
     if li_n[i] < x:
         ans.append(li_n[i])
 
-for i in range(len(ans)):
-    print(ans[i], end=" ")
+
+print(*ans)
