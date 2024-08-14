@@ -18,7 +18,6 @@ for i in range(n):
                 break
         else:
             if s[j] not in li:
-                pass
                 cnt += 1
             elif s[j] in li:
                 break
