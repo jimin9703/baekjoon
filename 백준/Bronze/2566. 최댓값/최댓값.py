@@ -2,16 +2,14 @@ import sys
 
 arr = [list(map(int, sys.stdin.readline().strip().split())) for _ in range(9)]
 
-li = []
+Max = -1
+x, y = -1, -1
 
 for i in range(9):
-    m = max(arr[i])
-    li.append(m)
-    
-n = max(li)
-print(max(li))
+    for j in range(9):
+        if arr[i][j] > Max:
+            Max = arr[i][j]
+            x, y = i, j
 
-for j in range(9):
-    for k in range(9):
-        if arr[j][k] == n:
-            print(j+1, k+1)
+print(Max)
+print(x+1, y+1)
