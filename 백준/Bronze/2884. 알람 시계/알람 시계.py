@@ -1,13 +1,15 @@
 import sys
 
-H, M = map(int, sys.stdin.readline().strip().split())
+h, m = map(int, sys.stdin.readline().strip().split())
 
-if M > 45:
-    print(H, M-45)
-elif M == 45:
-    print(H, 0)
-elif M < 45:
-    if H > 0:
-        print(H-1, M+15)
-    elif H == 0:
-        print(23, M+15)
+if m < 45:
+    m = m + 15
+    if h == 0:
+        h = 23
+    else:
+        h = h - 1
+    print(h, m)
+
+else:
+    print(h, m-45)
+
