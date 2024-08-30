@@ -1,30 +1,23 @@
 import sys
 
-m = int(sys.stdin.readline().strip())
 n = int(sys.stdin.readline().strip())
-li = [False] * 10001
-sum = 0
-lin = []
 
-for i in range(m,n+1):
+m = int(sys.stdin.readline().strip())
+
+L = []
+
+for i in range(n, m+1):
     if i == 1:
         continue
+
     for j in range(2, i):
-        if i % j == 0:
+        if not i % j:
             break
-
     else:
-        li[i] = True
-        lin.append(i)
+        L.append(i)
 
-for k in range(m, n+1):
-    if li[k] == True:
-        sum += k
-
-
-
-if sum == 0:
-    print(-1)
+if L:
+    print(sum(L))
+    print(min(L))
 else:
-    print(sum)
-    print(lin[0])
+    print(-1)
