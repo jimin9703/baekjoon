@@ -6,10 +6,7 @@ m = int(sys.stdin.readline().strip())
 
 L = []
 
-for i in range(n, m+1):
-    if i == 1:
-        continue
-
+for i in range(max(2, n), m+1):
     for j in range(2, i):
         if not i % j:
             break
