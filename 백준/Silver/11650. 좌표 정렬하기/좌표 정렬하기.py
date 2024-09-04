@@ -1,13 +1,8 @@
 import sys
 
 n = int(sys.stdin.readline().strip())
-li = []
+L = [list(map(int, sys.stdin.readline().strip().split())) for _ in range(n)]
 
+L.sort()
 for i in range(n):
-    b = list(map(int, sys.stdin.readline().strip().split()))
-    li.append(b)
-
-li.sort()
-
-for j in range(len(li)):
-    print(li[j][0], li[j][1])
+  print(*L[i])
