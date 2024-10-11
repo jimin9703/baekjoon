@@ -21,7 +21,7 @@ while q:
                 q.append(i)
 
         if i == k:
-            if visited[i] >= visited[x]+1:
+            if visited[i] == visited[x]+1:
                 cnt += 1
                 # ans.append(visited[i])
 
