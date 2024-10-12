@@ -23,13 +23,10 @@ while q:
         if i == k:
             if visited[i] == visited[x]+1:
                 cnt += 1
-                # ans.append(visited[i])
+                
 
 
 print(visited[k])
-# for i in ans:
-#     if i == visited[k]:
-#         cnt += 1
 
 if n == k:
     cnt = 1
