@@ -3,15 +3,11 @@ from collections import deque
 def solution(n, computers):
     q = deque()
     visited = [-1] * n
-    # for i in range(1, n):
-    #     if computers[0][i] == 1:
-    #         q.append(i)
-    #         visited[i] = 1
+
     q.append(0)
     visited[0] = 1
     cnt = 0
-    if not q:
-        cnt = n
+    
     while q:
         x = q.popleft()
         
