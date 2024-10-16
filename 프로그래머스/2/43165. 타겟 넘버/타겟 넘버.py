@@ -6,7 +6,7 @@ def solution(numbers, target):
         q.append(i)
     cnt = 0
     i = 1
-    time = 1
+    nxt = []
     while q:
         
         x = q.popleft()
@@ -18,13 +18,13 @@ def solution(numbers, target):
             if nx == target and i == len(numbers) - 1:
                 cnt += 1
             else:
-                q.append(nx)
-        
-        if time == 2**i:
+                nxt.append(nx)
+                
+        if not q and nxt:
+            while nxt:
+                q.append(nxt.pop())
             i += 1
-            time = 1
-        else:
-            time += 1
+        
         
         
         if i > len(numbers) - 1:
